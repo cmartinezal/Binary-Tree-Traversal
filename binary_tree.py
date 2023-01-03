@@ -15,8 +15,7 @@ class TreeNode:
         2. Visit all the nodes in the left subtree
         3. Visit all the nodes in the right subtree
         """
-        root = self.value
-        print(root, end=' ')
+        print(self.value, end=' ')
         if self.left:
             self.left.traverse_pre_order()
         if self.right:
@@ -33,8 +32,7 @@ class TreeNode:
         """
         if self.left:
             self.left.traverse_in_order()
-        root = self.value
-        print(root, end=' ')
+        print(self.value, end=' ')
         if self.right:
             self.right.traverse_in_order()
 
@@ -51,14 +49,16 @@ class TreeNode:
             self.left.traverse_post_order()
         if self.right:
             self.right.traverse_post_order()
-        root = self.value
-        print(root, end=' ')
+        print(self.value, end=' ')
 
 #Test case
 root = TreeNode(1)
 root.left = TreeNode(2)
 root.right = TreeNode(3)
 root.left.left = TreeNode(4)
+root.left.right = TreeNode(5)
+root.left.right.right = TreeNode(6)
+root.right.left = TreeNode(7)
 
 print("Pre order Traversal: ", end="")
 root.traverse_pre_order()
