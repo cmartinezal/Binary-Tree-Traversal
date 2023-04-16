@@ -1,5 +1,8 @@
-# Traversing Binary Tree in Python
-from ..binary_tree.binary_tree import TreeNode
+import os
+import sys
+root_folder = os.path.abspath(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(root_folder)
+from binary_tree.binary_tree import TreeNode
 
 def run_tests():
     ''' Construct the following tree (same as in png image Binary-Tree.png)
@@ -20,6 +23,7 @@ def run_tests():
     root.right.left = TreeNode(6)
     root.right.right = TreeNode(7)
 
+    # Traversing Binary Tree in Python
     print("Pre order Traversal: ", end="")
     root.traverse_pre_order()
     print("\nIn order Traversal: ", end="")
